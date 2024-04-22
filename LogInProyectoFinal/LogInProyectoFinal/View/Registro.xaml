@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LogInProyectoFinal.View.Registro">
+
+    <ContentPage.Content>
+        <StackLayout Spacing="10">
+
+            
+            <Label Text="Registro" 
+                   BackgroundColor="#FFA500"
+                   TextColor="White" 
+                   HorizontalOptions="FillAndExpand" 
+                   HorizontalTextAlignment="Center" 
+                   FontSize="Large" 
+                   Padding="10"/>
+
+                
+                <Entry Placeholder="Nombre" x:Name="nametxt" BackgroundColor="#007acc" Opacity="0.8"/>
+            <Entry Placeholder="Apellidos" x:Name="txtApellidos" BackgroundColor="#007acc" Opacity="0.8"/>
+            <Entry Placeholder="Telefono" x:Name="txtTelefono" BackgroundColor="#007acc" Opacity="0.8"/>
+            <Entry Placeholder="Direccion" x:Name="txtDepartamento" BackgroundColor="#007acc" Opacity="0.8"/>
+            <Entry Placeholder="Correo Electronico" x:Name="txtCorreo" BackgroundColor="#007acc" Opacity="0.8"/>
+            <Entry Placeholder="Contraseña" x:Name="txtContraseña" IsPassword="True" BackgroundColor="#007acc" Opacity="0.8"/>
+                <Button Text="Crear Usuario" 
+                    x:Name="btnCreate" 
+                    Clicked="btnCrearUsuario_Clicked" 
+                    BackgroundColor="#FFA500"
+                        CornerRadius="30"
+                    WidthRequest="200"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#007acc" Offset="0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+</ContentPage>

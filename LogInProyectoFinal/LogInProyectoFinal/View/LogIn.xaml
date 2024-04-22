@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LogInProyectoFinal.View.LogIn">
+
+    <ContentPage.Content>
+        <AbsoluteLayout>
+
+            <!-- Fondo con degradado de azul a naranja -->
+            <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                         AbsoluteLayout.LayoutFlags="All" 
+                         BackgroundColor="Transparent">
+                <StackLayout.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#007acc" Offset="0" />
+                        <GradientStop Color="#ff9900" Offset="1" />
+                    </LinearGradientBrush>
+                </StackLayout.Background>
+
+                <!-- Contenido de la página -->
+                <StackLayout AbsoluteLayout.LayoutBounds="0.5,0.5,-1,-1" 
+                             AbsoluteLayout.LayoutFlags="PositionProportional"
+                             Spacing="20" 
+                             Padding="30">
+
+                    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" >
+                        <Label Text="Ingresar Datos" TextColor="Black" FontSize="25" FontAttributes="Italic" />
+                    </StackLayout>
+
+                    <Entry Placeholder="Correo Electronico" 
+                           TextColor="Black"
+                           x:Name="txtCorreoElectronico" 
+                           BackgroundColor="#c8c7a4" 
+                           Opacity="0.8"/>
+                    <Entry Placeholder="Contraseña" 
+                           TextColor="Black"
+                           x:Name="txtContraseña" 
+                           IsPassword="True" 
+                           BackgroundColor="#c8c7a4" 
+                           Opacity="0.8"/>
+                    <Button Text="Iniciar Sesión" 
+                            x:Name="btnLogin" 
+                            Clicked="btnLogin_Clicked"
+                            CornerRadius="30"
+                            BackgroundColor="#715e46"
+                            WidthRequest="200"
+                            HeightRequest="50"
+                            HorizontalOptions="Center"/>
+                    <Button Text="Registrarse" 
+                            x:Name="btnCreate" 
+                            Clicked="btnCreate_Clicked"
+                            CornerRadius="30"
+                            BackgroundColor="#715e46"
+                            WidthRequest="200"
+                            HeightRequest="50"
+                            HorizontalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
